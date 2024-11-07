@@ -1,0 +1,28 @@
+<!-- Modal -->
+<div class="modal fade" id="locationModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Your modal content goes here -->
+        <p id="addressText">Site Address: <span id="siteAddress">N.A.</span></p>
+        <div class="mb-3">
+          <label for="locationSearch" class="form-label">Search Location</label>
+          <input type="text" class="form-control" id="locationSearch" placeholder="Enter location">
+          <ul id="autocomplete-results" class="list-group" style="display: none; position: absolute; width: 100%; z-index: 1000;"></ul>
+        </div>
+        <button id="getLocationBtn" class="btn btn-light" style="position: absolute; top: 145px; left: 50%; transform: translateX(-50%); z-index: 1;">
+          Get Current Location
+        </button>
+        <div id="map" style="height: 400px; width: 100%;"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="creatbtn" data-bs-dismiss="modal">Create</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="text-center">
+  <div>
+    <h3>Building Location</h3>
+    <p class="text-muted">Enter the building location for the project.</p>
+  </div>
+  <div class="text-end">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#locationModal">
+      New Building Location
+    </button>
+  </div>
+  <div id="locationDetails" class="border my-2">
+    <p id="fallbackMessage" class="mt-auto mb-auto p-3">No Building Location Found</p>
+    <div id="locationContent" style="display: none;" class="text-start">
+        <p id="street" class="mt-auto mb-auto p-1">Street: N.A.</p>
+        <p id="city" class="mt-auto mb-auto p-1">City: N.A.</p>
+        <p id="state" class="mt-auto mb-auto p-1">State: N.A.</p>
+        <p id="country" class="mt-auto mb-auto p-1">Country: N.A.</p>
+        <p id="latitude" class="mt-auto mb-auto p-1">Latitude: N.A.</p>
+        <p id="longitude" class="mt-auto mb-auto p-1">Longitude: N.A.</p>
+    </div>
+    <div id="mapMain" style="height: 400px; width: 100%; margin-top: 20px; display: none;"></div>
+  </div>
+</div>
+<%= render 'location_modal' %>

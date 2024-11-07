@@ -22,17 +22,21 @@ class LocationsController < ApplicationController
   # POST /locations or /locations.json
   def create
     @location = Location.new(location_params)
-
+  
     respond_to do |format|
       if @location.save
-        format.html { redirect_to @location, notice: "Location was successfully created." }
-        format.json { render :show, status: :created, location: @location }
+        format.json do
+          render json: {
+            location: @location,
+            html: render_to_string(partial: "locations/location_item", locals: { location: @location })
+          }, status: :created
+        end
       else
-        format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @location.errors, status: :unprocessable_entity }
       end
     end
   end
+  
 
   # PATCH/PUT /locations/1 or /locations/1.json
   def update
@@ -56,7 +60,7 @@ class LocationsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_location
@@ -68,3 +72,4 @@ class LocationsController < ApplicationController
       params.require(:location).permit(:street, :city, :state, :country, :latitude, :longitude)
     end
 end
+

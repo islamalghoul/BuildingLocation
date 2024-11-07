@@ -13,6 +13,7 @@
 ActiveRecord::Schema.define(version: 2024_11_07_061257) do
 
   create_table "locations", force: :cascade do |t|
+    t.string "name"
     t.string "street"
     t.string "city"
     t.string "state"

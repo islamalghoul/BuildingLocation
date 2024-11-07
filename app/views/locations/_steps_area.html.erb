@@ -1,0 +1,15 @@
+<!-- app/views/locations/_steps_area.html.erb -->
+<div>
+  <h4>Steps</h4>
+  <ul class="list-group" id="location-list">
+    <% if @locations.present? %>
+      <% @locations.each do |location| %>
+        <li class="list-group-item my-1">
+          <%= location.city %> <!-- Replace with your preferred attribute -->
+        </li>
+      <% end %>
+    <% else %>
+      <li class="list-group-item text-muted" style="border: none" >No Building Location Found</li>
+    <% end %>
+  </ul>
+</div>
