@@ -61,3 +61,6 @@ gem 'turbo-rails'
 gem "hotwire-rails", "~> 0.1.3"
 
 gem 'jquery-rails'
+
+# Gemfile
+gem 'dotenv-rails', groups: [:development, :test]

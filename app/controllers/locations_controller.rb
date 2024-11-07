@@ -25,12 +25,7 @@ class LocationsController < ApplicationController
   
     respond_to do |format|
       if @location.save
-        format.json do
-          render json: {
-            location: @location,
-            html: render_to_string(partial: "locations/location_item", locals: { location: @location })
-          }, status: :created
-        end
+        format.json { render json: @location, status: :created }
       else
         format.json { render json: @location.errors, status: :unprocessable_entity }
       end
@@ -72,4 +67,3 @@ class LocationsController < ApplicationController
       params.require(:location).permit(:street, :city, :state, :country, :latitude, :longitude)
     end
 end
-
