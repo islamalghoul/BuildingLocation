@@ -214,6 +214,7 @@ function handleLocationResponse(data) {
     document.getElementById("creatbtn").style.display = "none";
     document.getElementById("updatebtn").style.display = "block";
     document.getElementById("modalBtn").textContent = "Update Building Location";
+    document.getElementById("title").textContent="Update Builing Location"
     fetchLocations();
     displayMapOnMainContent();
 }

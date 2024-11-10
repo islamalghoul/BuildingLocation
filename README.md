@@ -32,5 +32,5 @@ rails s
 ```
 
 ### Usage
-[Watch the demo](./usage.mp4)
+[Watch the demo](https://drive.google.com/file/d/1jLcKMSibM1TwFb_J5o_kwyMIa8OJNmgc/view?usp=sharing)
 
