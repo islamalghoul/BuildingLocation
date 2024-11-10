@@ -1,26 +1,36 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Project Setup and Usage Instructions
 
-Things you may want to cover:
+#### Prerequisites
+1. Ruby 3.1.1
+2. Rails 6.1.7.8
+3. Node.js
+4. Yarn (for managing JavaScript packages)
+5. Database SQLite
 
-* Ruby version
 
-* System dependencies
+### To run the app
+Step 1: Clone the Repository
+step 2: Install the required Ruby gems and frontend dependencies using Bundler and Yarn:
+```
+budndle install
+yarn install
+```
 
-* Configuration
+Step 3: Set up the database:
+```
+rails db:migrate
+```
+Step 4: Create .env file and add your google map api key:
+```
+KEY=your key
+```
 
-* Database creation
+Step 5: Start the Rails Server:
+```
+rails s
+```
 
-* Database initialization
+### Usage
+[Watch the demo](./usage.mp4)
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# BuildingLocation
-# BuildingLocation

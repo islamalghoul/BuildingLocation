@@ -5,7 +5,11 @@
     <% if @locations.present? %>
       <% @locations.each do |location| %>
         <li class="list-group-item my-1">
-          <%= location.city %> <!-- Replace with your preferred attribute -->
+            <% if location.street != "N.A." %>
+                <%= location.street %>, <%= location.city %>
+            <% else %>
+                <%= location.city %>
+            <% end %>
         </li>
       <% end %>
     <% else %>
