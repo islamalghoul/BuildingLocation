@@ -20,5 +20,5 @@ services:
         sync: false
       - key: WEB_CONCURRENCY
         value: 2
-      - key: KEY  # Add this section
-      value: AIzaSyAsywiNJodkobG2OptKpyer2fz696hNUW0
+      - key: KEY
+        value: AIzaSyAsywiNJodkobG2OptKpyer2fz696hNUW0
