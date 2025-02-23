@@ -2,6 +2,8 @@
 # exit on error
 set -o errexit
 
+set -x
+
 # Install yarn if not available
 if ! command -v yarn &> /dev/null; then
   echo "Installing yarn..."
